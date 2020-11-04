@@ -4,9 +4,13 @@ const GlobalStyles = createGlobalStyle`
 
     body, html, #__next {
         width : 100%;
-        min-height: 100vh;
-        margin: 0;
+        min-height: 100%;
+        margin: 0 !important;
         
+    }
+
+    body {
+        margin: 0;
     }
 
     *, *::before, *::after {

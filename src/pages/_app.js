@@ -1,16 +1,18 @@
 import GlobalStyles from 'styles/global-styles';
-import { ThemeContextProvider } from 'services/theme-service';
+
+// Services
+import Services from 'services';
 
 import Application from 'components/app-component';
 
 function App({ Component, pageProps }) {
   return (
-    <ThemeContextProvider>
+    <Services>
       <Application>
         <Component {...pageProps} />
         <GlobalStyles />
       </Application>
-    </ThemeContextProvider>
+    </Services>
   );
 }
 

@@ -2,21 +2,23 @@ import styled from 'styled-components';
 import { useTheme } from 'services/theme-service';
 
 import { Subtitle, Title, Text, Span } from 'shared/text';
+import usePlayer from 'hooks/use-player';
 
 const Div = styled.div`
-  width: 100%;
   background-color: ${({ theme }) => theme.template.primary};
 `;
 
 const Home = () => {
   const [theme, dispatch] = useTheme();
 
+  const player = usePlayer();
+
   const handlerClick = () => {
     dispatch({ type: 'TOGGLE_THEME' });
   };
 
   return (
-    <Div>
+    <>
       <button onClick={handlerClick}>Change</button>
       <br />
 
@@ -26,10 +28,11 @@ const Home = () => {
       <Subtitle text='Subtitulossss' />
 
       <Text text='Parrafo del tetxo' />
-      <Text t='Parrafo del tetxo segundo' />
 
       <Span>Span</Span>
-    </Div>
+      <br />
+      <button onClick={player}>Play</button>
+    </>
   );
 };
 

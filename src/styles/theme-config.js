@@ -6,7 +6,12 @@ const general = {
 
   fontFamily: 'Roboto',
 
-  breakPoints: {},
+  breakPoints: {
+    small: "576px",
+    medium: "768px",
+    large: "992px",
+    xlarge: "1200px"
+  },
 
   colors: {
     white: '#FFFFFF',
@@ -43,4 +48,4 @@ const white = {
   },
 };
 
-export default { dark, white };
+export default { dark, white, general };
