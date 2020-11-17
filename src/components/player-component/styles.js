@@ -6,8 +6,12 @@ const Layout = styled.div`
 
   /* border: 4px solid green; */
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 4px 0 rgba(0, 0, 0, 0.06);
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  
+  padding: 0 2rem 0 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export { Layout };

@@ -1,27 +1,46 @@
 // Styles components
 import { Layout } from './styles';
-import { PlayCircleFilled, HeartFilled } from "@ant-design/icons"
-import { useThemeContext } from 'services/theme-service';
-import styled from "styled-components"
+import { HeartIcon, PlayIcon } from "shared/icons"
+// import { useThemeContext } from 'services/theme-service';
+import { Information, Left, Middle, Right } from "./containers"
+import {useSocket} from "services/socket-service"
+import { useEffect } from 'react';
 
-const Right = styled.div``
-const Left = styled.div``
+const Player = () => {
 
-const Player = ({ children }) => {
-    const { colors } = useThemeContext()
+    const song = useSocket()
 
-    // return <Layout> Player works!  <PlayCircleFilled style={{color: colors.green }} /> <HeartFilled style={{color: colors.red }} />  {children}</Layout>
-    
+    // useEffect(() => {
+    //     console.log(song.artist[0].name)
+    // })
+
     return (
         <Layout>
-            
+
+
+
             <Right>
-                <img src="./no-image.webp" width="80px" height="80px" />
+                
+            <img src={song.album && song.album.images[0].url } width="80px" height="80px" />
+                
+                <Information>
+                    <p>{song.title}</p>
+                    <p>{song.artist && song.artist[0].name }</p>
+                </Information>
+
             </Right>
 
+            <Middle>
 
-            <Left></Left>
+                <PlayIcon />
+            
+                <HeartIcon/> 
 
+                <div>volume</div>
+
+            </Middle>
+
+            <Left>Server</Left>
 
         </Layout>
     )
