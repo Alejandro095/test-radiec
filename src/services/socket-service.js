@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import io from "socket.io-client";
 
-const ENDPOINT = "http://micro-radiec.herokuapp.com/"
+const ENDPOINT = "https://micro-radiec.herokuapp.com/"
 
 const SocketContext = createContext();
 
