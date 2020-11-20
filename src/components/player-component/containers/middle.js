@@ -18,7 +18,7 @@ const Middle = styled.div`
 
     & > div:nth-child(3) {
         display: flex;
-        background-color: red;
+        /* background-color: red; */
         flex: 1;
         padding: 0 0.5rem;
     }
