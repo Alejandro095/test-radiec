@@ -4,15 +4,10 @@ import { HeartIcon, PlayIcon } from "shared/icons"
 // import { useThemeContext } from 'services/theme-service';
 import { Information, Left, Middle, Right } from "./containers"
 import {useSocket} from "services/socket-service"
-import { useEffect } from 'react';
 
 const Player = () => {
 
     const song = useSocket()
-
-    // useEffect(() => {
-    //     console.log(song.artist[0].name)
-    // })
 
     return (
         <Layout>

@@ -32,6 +32,11 @@ const dark = {
     primary: '#141618',
     secondary: '#282D31',
   },
+  
+  text: {
+    title: '#CED4DA',
+    subtitle: '#53575A'
+  },
 };
 
 const white = {
@@ -44,7 +49,7 @@ const white = {
 
   text: {
     title: '#53575A',
-    text: '#CED4DA',
+    subtitle: '#CED4DA',
   },
 };
 

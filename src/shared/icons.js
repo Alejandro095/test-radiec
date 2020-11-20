@@ -11,7 +11,7 @@ const PlayIconBase = styled(IconBase)`
         color: ${({theme}) => theme.colors.green}        
     }
 `
-const PlayIcon = (...props) => <PlayIconBase><PlayCircleFilled {...props}/></PlayIconBase>
+const PlayIcon = (...props) => <PlayIconBase><PlayCircleFilled/></PlayIconBase>
 
 
 const HeartIconBase = styled(IconBase)`
@@ -20,7 +20,7 @@ const HeartIconBase = styled(IconBase)`
         color: ${({theme}) => theme.colors.red}
     }
 `
-const HeartIcon = (...props) => <HeartIconBase><HeartFilled {...props}/></HeartIconBase>
+const HeartIcon = (...props) => <HeartIconBase><HeartFilled/></HeartIconBase>
 
 
 export { PlayIcon, HeartIcon };
