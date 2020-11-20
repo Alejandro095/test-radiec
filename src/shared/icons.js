@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PlayCircleFilled, HeartFilled } from "@ant-design/icons"
+import { PlayCircleFilled, HeartFilled, FacebookFilled, TwitterSquareFilled, InstagramFilled, MailFilled } from "@ant-design/icons"
 
 const IconBase = styled.div`
     cursor: pointer;
@@ -22,5 +22,18 @@ const HeartIconBase = styled(IconBase)`
 `
 const HeartIcon = (...props) => <HeartIconBase><HeartFilled/></HeartIconBase>
 
+const SocialeIcons = styled(IconBase)`
 
-export { PlayIcon, HeartIcon };
+    & span {
+        font-size: 1.25rem;
+        color: ${({theme}) => theme.text.subtitle}
+    }
+`
+
+const FacebookIcon = (...props) => <SocialeIcons><FacebookFilled/></SocialeIcons>
+const TwitterIcon = (...props) => <SocialeIcons><TwitterSquareFilled/></SocialeIcons>
+const InstagramIcon = (...props) => <SocialeIcons><InstagramFilled/></SocialeIcons>
+const EmailIcon = (...props) => <SocialeIcons><MailFilled/></SocialeIcons>
+
+
+export { PlayIcon, HeartIcon, FacebookIcon, TwitterIcon, InstagramIcon, EmailIcon };

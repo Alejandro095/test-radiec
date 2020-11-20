@@ -1,8 +1,23 @@
 import styled from 'styled-components';
 
+const Layer = styled.div`
+
+width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ${({theme}) => theme.colors.graySecond};
+`
+
 const Layout = styled.div`
   width: 100%;
   height: 100vh;
+
+  max-width: 1920px;
+  max-height: 1080px;
 
   background-color: ${({ theme }) => theme.template.primary};
 
@@ -22,9 +37,9 @@ const Container = styled.div`
   grid-template-rows: 1fr;
 
   @media (min-width: ${(props) => props.theme.breakPoints.small}) {
-    grid-template-columns: minmax(360px, 460px) 1fr;
+    grid-template-columns: minmax(18rem, 25rem) 1fr;
     
   }
 `;
 
-export { Layout, Container };
+export { Layout, Container, Layer };

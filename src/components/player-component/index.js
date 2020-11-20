@@ -22,7 +22,7 @@ const Player = () => {
 
             <Right>
                 
-            <img src={song.album && song.album.images[0].url} width="80px" height="80px" />
+            <img src={song.album && song.album.images[0].url} width="60px" height="60px" />
                 
                 <Information>
                     <p>{song.title}</p>

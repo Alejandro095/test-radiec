@@ -37,6 +37,9 @@ const dark = {
     title: '#CED4DA',
     subtitle: '#53575A'
   },
+
+  logoColor: "#E9ECEF"
+
 };
 
 const white = {
@@ -51,6 +54,8 @@ const white = {
     title: '#53575A',
     subtitle: '#CED4DA',
   },
+
+  logoColor: "#ADB5BD"
 };
 
 export default { dark, white, general };

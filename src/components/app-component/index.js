@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Styles components
-import { Layout, Container } from './styles';
+import {Layer, Layout, Container } from './styles';
 
 // Components
 import Aside from 'components/aside-component';
@@ -11,7 +11,8 @@ import Player from 'components/player-component';
 import MobileHeader from "containers/mobile-header"
 
 const Application = ({ children }) => (
-  <Layout>
+ <Layer>
+    <Layout>
     <MobileHeader />
     <Container>
       <Aside />
@@ -19,6 +20,7 @@ const Application = ({ children }) => (
     </Container>
     <Player />
   </Layout>
+ </Layer>
 );
 
 export default Application;
